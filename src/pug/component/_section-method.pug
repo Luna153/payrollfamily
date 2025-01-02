@@ -1,0 +1,82 @@
+//- section
+mixin section-method()
+  section.section.section-method#section-method
+    .wrap__inner
+      .section-method__box.js-animate.js-animate--fadein-down.js-animate--delay700
+        h2.section-method__top.noto-900 申請方式
+        .section-method__bottom
+          h3.section-method__title.fc-blue.noto-700
+            span 家屬
+            span.fc-red 尚未持有
+            span 永豐銀行帳戶
+
+          //- 申請方式-步驟
+          .steps-wrap
+            .step-item.noto-700.js-animate.js-animate--fadein-down.js-animate--delay200
+              .step-item--ribbon.bebas-400 01
+              .step-item--content
+                h4 雲端填寫開戶資料
+                .qrcode
+                  img(src="images/qrcode-1.svg" alt='永豐銀行')
+            .step-item.noto-700.js-animate.js-animate--fadein-down.js-animate--delay400
+              .step-item--ribbon.bebas-400 02
+              .step-item--content
+                h4 預約分行對保
+                .qrcode
+                  img(src="images/qrcode-2.svg" alt='永豐銀行')
+            .step-item.noto-700.js-animate.js-animate--fadein-down.js-animate--delay600
+              .step-item--ribbon.bebas-400 03
+              .step-item--content
+                h4 下載專案申請書
+                .qrcode
+                  img(src="images/qrcode-3.svg" alt='永豐銀行')
+            .step-item.noto-700.js-animate.js-animate--fadein-down.js-animate--delay800
+              .step-item--ribbon.bebas-400 04
+              .step-item--content.noto-500
+                h4 家屬攜帶文件親臨分行
+                ol
+                  li.fc-gray.title 1.開戶雙證件
+                    p.fc-gray 本國人：身分證、第二證件
+                      br
+                      | (健保卡/駕照)
+                    p.fc-gray 外籍人士：居留證、第二證件
+                      br
+                      | (健保卡/駕照)
+                  li.fc-gray 2.專案申請書
+                  li.fc-gray 3.與員工之關係證明文件：
+                  li.fc-gray.d-flex.nowrap 身分證/戶口名簿
+                    span (正副本均可)
+          //- 申請方式-步驟 mobile (inline svg 請換成圖片)
+          .m-steps-wrap.noto-700
+            .m-step-item.js-animate.js-animate--fadein-down.js-animate--delay200
+              .m-step-item--num 01
+              .m-step-item--text 雲端填寫開戶資料
+              a(href="https://apply.sinopac.com/QuickAccount/QuickAccount/Login?channel=QuickAcc" title='雲端填寫開戶資料' target='_blank').m-step-item--btn GO
+            img(src='images/img_method-arrow.svg' alt='').js-animate.js-animate--fadein-down.js-animate--delay300
+            .m-step-item.js-animate.js-animate--fadein-down.js-animate--delay400
+              .m-step-item--num 02
+              .m-step-item--text 預約分行對保
+              a(href="https://ibranch.sinopac.com" title='預約分行對保' target='_blank').m-step-item--btn GO
+            img(src='images/img_method-arrow.svg' alt='').js-animate.js-animate--fadein-down.js-animate--delay500
+            .m-step-item.js-animate.js-animate--fadein-down.js-animate--delay600
+              .m-step-item--num 03
+              .m-step-item--text 下載專案申請書
+              a(href="https://bank.sinopac.com/sinopacBT/webevents/payrollfamily/薪轉家屬同享優惠-申請表單.pdf" title='下載專案申請書' target='_blank').m-step-item--btn GO
+            img(src='images/img_method-arrow.svg' alt='').js-animate.js-animate--fadein-down.js-animate--delay700
+            .m-step-item.fc-gray.js-animate.js-animate--fadein-down.js-animate--delay800
+              .m-step-item--num 04
+              .m-step-item--text 家屬攜帶文件親臨分行
+          .m-step-item--content.noto-500
+            ol
+              li.fc-gray.title 1.開戶雙證件
+                p.fc-gray 本國人：身分證、第二證件(健保卡/駕照)
+                p.fc-gray 外籍人士：居留證、第二證件(健保卡/駕照)
+              li.fc-gray 2.專案申請書
+              li.fc-gray 3.與員工之關係證明文件：身分證/戶口名簿(正副本均可)
+          h3.section-method__title.fc-blue.noto-700.mt-4
+            span 家屬
+            span.fc-red 已持有
+            span 永豐銀行帳戶
+          .section-method__subtitle.fc-gray.noto-300 員工或家屬攜帶1.專案申請書 2.家屬與員工之關係證明文件(身分證/戶口名簿，正副本均可)親臨分行辦理
+
+

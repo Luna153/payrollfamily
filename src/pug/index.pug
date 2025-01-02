@@ -1,0 +1,15 @@
+extends _layout.pug
+
+append vars
+
+block content
+  main.index
+    //- KV
+    +section-kv()
+    //- Project description
+    +section-desc()
+    //- Application method
+    +section-method()
+    //- 注意事項
+    +section-notice()
+

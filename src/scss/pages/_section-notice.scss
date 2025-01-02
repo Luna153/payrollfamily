@@ -1,0 +1,156 @@
+// 警語
+// ---------------------------------
+.section-notice {
+  // web-1920
+  padding: 20px 0;
+  background-color: #DBE6F5;
+  color: #000;
+
+  .wrap__inner {
+    max-width: 800px;
+    padding: 0 45px;
+
+  }
+
+  .notice {
+
+    &__th,
+    &__tr {
+      display: flex;
+    }
+
+    &__td {
+      &:nth-child(1) {
+        // letter-spacing: 3px;
+        flex: 0 0 22px;
+      }
+
+      &:nth-child(2) {
+        margin-left: 3px;
+        margin-top: 1px;
+      }
+    }
+
+    &-title {
+      border-bottom: none;
+      @include flex-center;
+      transition: transform 0.6s $cubic;
+      font-size: 25px;
+      padding-left: 36px;
+      letter-spacing: 2px;
+
+      &::after {
+        content: "\e145";
+        font-family: "Material Icons Outlined";
+        font-size: 40px;
+        margin-left: -6px;
+      }
+    }
+
+    &__toggle {
+      cursor: pointer;
+      color: inherit;
+    }
+
+    &-container {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+
+      .notice-list {
+
+        ul.inner {
+          padding-bottom: 0px;
+        }
+
+        li {
+          list-style: decimal;
+          line-height: 1.45;
+          letter-spacing: 0.1px;
+          font-size: 12px;
+          margin-left: 15px;
+          padding-left: 0;
+          text-align: justify;
+        }
+      }
+    }
+
+    &__content {
+      display: none;
+      font-size: 12px;
+    }
+
+    &--active {
+      .notice-title {
+        padding-bottom: 8px;
+      }
+
+      .notice-title::after {
+        content: "\e15b";
+        font-family: "Material Icons Outlined";
+      }
+    }
+  }
+
+  // web中版-1420
+  @include breakpoint(xl) {}
+
+  // 行動裝置大版Pad-1024
+  @include breakpoint(md) {}
+
+  // 小網-768
+  @include breakpoint(sm) {
+    background: #D6D6D6;
+
+    .wrap__inner {
+      max-width: vwm(768px);
+      padding: 0 vwm(30px);
+
+    }
+
+    .notice {
+
+      &-title {
+        font-size: vwm(35px);
+        padding-top: vwm(8px);
+        padding-left: 0;
+
+        &::after {
+          font-size: clamp(15px, vwm(40px), vwm(40px));
+          margin-left: vwm(5px);
+        }
+      }
+
+
+      &-container {
+
+        .notice-list {
+
+          ul.inner {
+            padding-bottom: 0px;
+          }
+
+          li {
+            font-size: clamp(12px, vwm(24px), vwm(24px));
+            margin-left: vwm(26px);
+            padding-left: 0;
+            line-height: 1.5;
+          }
+        }
+      }
+
+      &__content {
+        display: none;
+        font-size: 12px;
+      }
+
+      &--active {
+        .notice-title {
+          padding: vwm(7px) 0 vwm(31px) 0;
+        }
+
+      }
+    }
+
+
+  }
+}

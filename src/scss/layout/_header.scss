@@ -1,0 +1,104 @@
+@import "../component/public";
+
+.header {
+  position: fixed;
+  z-index: $z-header;
+  width: 100%;
+  background-color: #E72410;
+
+
+  &__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    @include flex-separate;
+    align-items: center;
+    height: $header-height-lg;
+    background-color: #E72410;
+  }
+
+  &__logo {
+    // width: 156px;
+    height: 100%;
+    position: relative;
+    z-index: 9;
+    background-color: #fff;
+    padding: 8px 24px;
+
+    img {
+      object-fit: contain;
+      width: 106px;
+      height: 100%;
+    }
+  }
+
+  &__nav {
+    width: 75px;
+    height: 100%;
+    margin-right: 25px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// @media (min-width: 1921px) {
+//   .header {
+//     background-color: #E5E3E0;
+//     &__inner {
+//       flex-direction: column;
+//       height: 100px;
+//     }
+
+//     &__logo {
+//       flex: 1;
+//       width: 100%;
+//       text-align: center;
+//       padding: 0;
+
+//       img {
+//         width: 110px;
+//       }
+//     }
+
+//     &__nav {
+//       @include flex-center;
+//       width: 100%;
+//       flex: 1;
+//       margin-right: 0;
+
+//       img {
+//         width: 74px;
+//       }
+//     }
+//   }
+// }
+
+// 小網-768
+@include breakpoint(sm) {
+  .header {
+    box-shadow: none;
+    background-color: transparent;
+
+    &__inner {
+      height: $header-height-sm;
+      background-color: transparent;
+    }
+
+    &__logo {
+      background-color: #C1DEEA;
+      width: 100%;
+      text-align: center;
+      padding: 0;
+      padding-top: vwm(12px);
+
+      img {
+        width: vwm(205px);
+      }
+    }
+
+    &__nav {
+      display: none;
+    }
+  }
+}
